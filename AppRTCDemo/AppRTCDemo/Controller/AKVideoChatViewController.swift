@@ -1,19 +1,18 @@
 //
-//  ViewController.swift
+//  AKVideoChatViewController.swift
 //  AppRTCDemo
 //
-//  Created by akanchi on 2021/1/4.
+//  Created by akanchi on 2021/1/10.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class AKVideoChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
-
 }
-

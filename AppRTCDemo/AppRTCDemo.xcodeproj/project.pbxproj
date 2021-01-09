@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49627F4ADFFBA18097BE923C /* Pods_AppRTCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A00FE75BA9AC87F8D4F3E8D /* Pods_AppRTCDemo.framework */; };
 		BE302EDF25A3450C00A744C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE302EDE25A3450C00A744C1 /* AppDelegate.swift */; };
 		BE302EE125A3450C00A744C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE302EE025A3450C00A744C1 /* SceneDelegate.swift */; };
-		BE302EE325A3450C00A744C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE302EE225A3450C00A744C1 /* ViewController.swift */; };
+		BE302EE325A3450C00A744C1 /* AKMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE302EE225A3450C00A744C1 /* AKMainViewController.swift */; };
 		BE302EE625A3450C00A744C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE302EE425A3450C00A744C1 /* Main.storyboard */; };
 		BE302EE825A3450D00A744C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE302EE725A3450D00A744C1 /* Assets.xcassets */; };
 		BE302EEB25A3450D00A744C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE302EE925A3450D00A744C1 /* LaunchScreen.storyboard */; };
+		BE302EFF25AA195100A744C1 /* AKVideoChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE302EFE25AA195100A744C1 /* AKVideoChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A00FE75BA9AC87F8D4F3E8D /* Pods_AppRTCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRTCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D54B5F1370E2BE0ABDCADC /* Pods-AppRTCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRTCDemo.release.xcconfig"; path = "Target Support Files/Pods-AppRTCDemo/Pods-AppRTCDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B9168690CE1AF2496F6995C4 /* Pods-AppRTCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRTCDemo.debug.xcconfig"; path = "Target Support Files/Pods-AppRTCDemo/Pods-AppRTCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BE302EDB25A3450C00A744C1 /* AppRTCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppRTCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE302EDE25A3450C00A744C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE302EE025A3450C00A744C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE302EE225A3450C00A744C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE302EE225A3450C00A744C1 /* AKMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKMainViewController.swift; sourceTree = "<group>"; };
 		BE302EE525A3450C00A744C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE302EE725A3450D00A744C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE302EEA25A3450D00A744C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE302EEC25A3450D00A744C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE302EFE25AA195100A744C1 /* AKVideoChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKVideoChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49627F4ADFFBA18097BE923C /* Pods_AppRTCDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1402DDFA88BBF31E0BD73FE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A00FE75BA9AC87F8D4F3E8D /* Pods_AppRTCDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4854BAD6D95590E8954BBDBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9168690CE1AF2496F6995C4 /* Pods-AppRTCDemo.debug.xcconfig */,
+				B1D54B5F1370E2BE0ABDCADC /* Pods-AppRTCDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BE302ED225A3450C00A744C1 = {
 			isa = PBXGroup;
 			children = (
 				BE302EDD25A3450C00A744C1 /* AppRTCDemo */,
 				BE302EDC25A3450C00A744C1 /* Products */,
+				4854BAD6D95590E8954BBDBF /* Pods */,
+				1402DDFA88BBF31E0BD73FE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +82,32 @@
 		BE302EDD25A3450C00A744C1 /* AppRTCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BE302EF425AA0FDF00A744C1 /* Controller */,
+				BE302EF325AA0FA100A744C1 /* App */,
+			);
+			path = AppRTCDemo;
+			sourceTree = "<group>";
+		};
+		BE302EF325AA0FA100A744C1 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				BE302EDE25A3450C00A744C1 /* AppDelegate.swift */,
 				BE302EE025A3450C00A744C1 /* SceneDelegate.swift */,
-				BE302EE225A3450C00A744C1 /* ViewController.swift */,
 				BE302EE425A3450C00A744C1 /* Main.storyboard */,
 				BE302EE725A3450D00A744C1 /* Assets.xcassets */,
 				BE302EE925A3450D00A744C1 /* LaunchScreen.storyboard */,
 				BE302EEC25A3450D00A744C1 /* Info.plist */,
 			);
-			path = AppRTCDemo;
+			path = App;
+			sourceTree = "<group>";
+		};
+		BE302EF425AA0FDF00A744C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE302EE225A3450C00A744C1 /* AKMainViewController.swift */,
+				BE302EFE25AA195100A744C1 /* AKVideoChatViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE302EEF25A3450D00A744C1 /* Build configuration list for PBXNativeTarget "AppRTCDemo" */;
 			buildPhases = (
+				7396453783273EFF599665FA /* [CP] Check Pods Manifest.lock */,
 				BE302ED725A3450C00A744C1 /* Sources */,
 				BE302ED825A3450C00A744C1 /* Frameworks */,
 				BE302ED925A3450C00A744C1 /* Resources */,
+				7C3B025C9618C2849D8551EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +177,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7396453783273EFF599665FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppRTCDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C3B025C9618C2849D8551EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppRTCDemo/Pods-AppRTCDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppRTCDemo/Pods-AppRTCDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppRTCDemo/Pods-AppRTCDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE302ED725A3450C00A744C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE302EE325A3450C00A744C1 /* ViewController.swift in Sources */,
+				BE302EFF25AA195100A744C1 /* AKVideoChatViewController.swift in Sources */,
+				BE302EE325A3450C00A744C1 /* AKMainViewController.swift in Sources */,
 				BE302EDF25A3450C00A744C1 /* AppDelegate.swift in Sources */,
 				BE302EE125A3450C00A744C1 /* SceneDelegate.swift in Sources */,
 			);
@@ -283,11 +371,12 @@
 		};
 		BE302EF025A3450D00A744C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9168690CE1AF2496F6995C4 /* Pods-AppRTCDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AppRTCDemo/Info.plist;
+				INFOPLIST_FILE = AppRTCDemo/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,11 +390,12 @@
 		};
 		BE302EF125A3450D00A744C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D54B5F1370E2BE0ABDCADC /* Pods-AppRTCDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AppRTCDemo/Info.plist;
+				INFOPLIST_FILE = AppRTCDemo/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
