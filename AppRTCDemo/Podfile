@@ -8,4 +8,6 @@ target 'AppRTCDemo' do
 
   # Pods for AppRTCDemo
   pod 'SnapKit', '~> 5.0.0'
+  pod 'GoogleWebRTC'
+
 end

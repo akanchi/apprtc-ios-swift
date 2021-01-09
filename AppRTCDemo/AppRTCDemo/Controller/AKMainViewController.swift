@@ -17,6 +17,8 @@ class AKMainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
+        self.navigationController?.navigationBar.isHidden = true
+
         self.setupViews()
         self.setupConstraints()
     }
@@ -50,6 +52,7 @@ class AKMainViewController: UIViewController {
             button.layer.cornerRadius = 5
             button.layer.masksToBounds = true
             button.setTitle("JOIN", for: .normal)
+            button.addTarget(self, action: #selector(onJoinAction), for: .touchUpInside)
             return button
         }()
         self.view.addSubview(self.joinButton)
@@ -72,6 +75,13 @@ class AKMainViewController: UIViewController {
             make.width.equalTo(84)
             make.height.equalTo(30)
         }
+    }
+
+// MARK: - Join点击事件
+    @objc
+    private func onJoinAction(sender: UIButton!) {
+        let chatVC = AKVideoChatViewController()
+        self.navigationController?.pushViewController(chatVC, animated: true)
     }
 }
 

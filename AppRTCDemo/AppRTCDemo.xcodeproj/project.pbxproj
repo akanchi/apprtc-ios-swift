@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		49627F4ADFFBA18097BE923C /* Pods_AppRTCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A00FE75BA9AC87F8D4F3E8D /* Pods_AppRTCDemo.framework */; };
 		BE302EDF25A3450C00A744C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE302EDE25A3450C00A744C1 /* AppDelegate.swift */; };
-		BE302EE125A3450C00A744C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE302EE025A3450C00A744C1 /* SceneDelegate.swift */; };
 		BE302EE325A3450C00A744C1 /* AKMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE302EE225A3450C00A744C1 /* AKMainViewController.swift */; };
 		BE302EE625A3450C00A744C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE302EE425A3450C00A744C1 /* Main.storyboard */; };
 		BE302EE825A3450D00A744C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE302EE725A3450D00A744C1 /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 		B9168690CE1AF2496F6995C4 /* Pods-AppRTCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRTCDemo.debug.xcconfig"; path = "Target Support Files/Pods-AppRTCDemo/Pods-AppRTCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BE302EDB25A3450C00A744C1 /* AppRTCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppRTCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE302EDE25A3450C00A744C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE302EE025A3450C00A744C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BE302EE225A3450C00A744C1 /* AKMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKMainViewController.swift; sourceTree = "<group>"; };
 		BE302EE525A3450C00A744C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE302EE725A3450D00A744C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				BE302EDE25A3450C00A744C1 /* AppDelegate.swift */,
-				BE302EE025A3450C00A744C1 /* SceneDelegate.swift */,
 				BE302EE425A3450C00A744C1 /* Main.storyboard */,
 				BE302EE725A3450D00A744C1 /* Assets.xcassets */,
 				BE302EE925A3450D00A744C1 /* LaunchScreen.storyboard */,
@@ -138,6 +135,7 @@
 		BE302ED325A3450C00A744C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = AK;
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
@@ -227,7 +225,6 @@
 				BE302EFF25AA195100A744C1 /* AKVideoChatViewController.swift in Sources */,
 				BE302EE325A3450C00A744C1 /* AKMainViewController.swift in Sources */,
 				BE302EDF25A3450C00A744C1 /* AppDelegate.swift in Sources */,
-				BE302EE125A3450C00A744C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

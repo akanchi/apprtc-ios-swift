@@ -1,16 +1,20 @@
 PODS:
+  - GoogleWebRTC (1.1.31999)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - GoogleWebRTC
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - GoogleWebRTC
     - SnapKit
 
 SPEC CHECKSUMS:
+  GoogleWebRTC: b39a78c4f5cc6b0323415b9233db03a2faa7b0f0
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 54d77b7df3967200ebb698fb208c15ea31dbacc3
+PODFILE CHECKSUM: a0b672a9c0e60508739cb9d4d61b0c94eb30494d
 
 COCOAPODS: 1.8.4
