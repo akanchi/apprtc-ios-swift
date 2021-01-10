@@ -80,8 +80,11 @@ class AKMainViewController: UIViewController {
 // MARK: - Join点击事件
     @objc
     private func onJoinAction(sender: UIButton!) {
-        let chatVC = AKVideoChatViewController()
-        self.navigationController?.pushViewController(chatVC, animated: true)
+        if let name = self.roomIdInputTextField.text {
+            let chatVC = AKVideoChatViewController()
+            chatVC.roomName = name
+            self.navigationController?.pushViewController(chatVC, animated: true)
+        }
     }
 }
 

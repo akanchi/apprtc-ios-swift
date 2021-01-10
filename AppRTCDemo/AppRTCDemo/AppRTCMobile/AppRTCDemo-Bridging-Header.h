@@ -3,3 +3,4 @@
 //
 
 #import "ARDAppClient.h"
+#import "ARDSettingsModel.h"

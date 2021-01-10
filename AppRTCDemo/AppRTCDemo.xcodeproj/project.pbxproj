@@ -31,6 +31,7 @@
 		BE302F8625AAD9A700A744C1 /* RTCIceServer+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = BE302F6C25AAD9A700A744C1 /* RTCIceServer+JSON.m */; };
 		BE302F8725AAD9A700A744C1 /* RTCSessionDescription+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = BE302F6E25AAD9A700A744C1 /* RTCSessionDescription+JSON.m */; };
 		BE302F8825AAD9A700A744C1 /* ARDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BE302F7425AAD9A700A744C1 /* ARDUtilities.m */; };
+		BE302F9225AAE26300A744C1 /* AKVideoChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE302F9125AAE26300A744C1 /* AKVideoChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		BE302F7525AAD9A700A744C1 /* ARDUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDUtilities.h; sourceTree = "<group>"; };
 		BE302F7625AAD9A700A744C1 /* RTCSessionDescription+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RTCSessionDescription+JSON.h"; sourceTree = "<group>"; };
 		BE302F7725AAD9A700A744C1 /* ARDCaptureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDCaptureController.h; sourceTree = "<group>"; };
+		BE302F9125AAE26300A744C1 /* AKVideoChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKVideoChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				BE302F0D25AABDDB00A744C1 /* AppRTCMobile */,
+				BE302F9025AAE24500A744C1 /* Model */,
 				BE302EF425AA0FDF00A744C1 /* Controller */,
 				BE302EF325AA0FA100A744C1 /* App */,
 			);
@@ -222,6 +225,14 @@
 				BE302F7525AAD9A700A744C1 /* ARDUtilities.h */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		BE302F9025AAE24500A744C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE302F9125AAE26300A744C1 /* AKVideoChatViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +363,7 @@
 				BE302F7B25AAD9A700A744C1 /* ARDJoinResponse.m in Sources */,
 				BE302F8725AAD9A700A744C1 /* RTCSessionDescription+JSON.m in Sources */,
 				BE302EE325A3450C00A744C1 /* AKMainViewController.swift in Sources */,
+				BE302F9225AAE26300A744C1 /* AKVideoChatViewModel.swift in Sources */,
 				BE302F8825AAD9A700A744C1 /* ARDUtilities.m in Sources */,
 				BE302F8025AAD9A700A744C1 /* ARDExternalSampleCapturer.m in Sources */,
 				BE302F7925AAD9A700A744C1 /* ARDSettingsModel.m in Sources */,
