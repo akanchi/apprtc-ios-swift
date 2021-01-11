@@ -83,4 +83,12 @@ typedef NS_ENUM(NSInteger, ARDAppClientState) {
 // Disconnects from the AppRTC servers and any connected clients.
 - (void)disconnect;
 
+// Mute and unmute Audio-In
+- (void)muteAudioIn;
+- (void)unmuteAudioIn;
+
+// Mute and unmute Video-In
+- (void)muteVideoIn;
+- (void)unmuteVideoIn;
+
 @end

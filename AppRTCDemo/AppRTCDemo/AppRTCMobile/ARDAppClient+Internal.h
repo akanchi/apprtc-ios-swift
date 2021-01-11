@@ -17,6 +17,8 @@
 #import "ARDTURNClient.h"
 
 @class RTC_OBJC_TYPE(RTCPeerConnectionFactory);
+@class RTC_OBJC_TYPE(RTCAudioTrack);
+@class RTC_OBJC_TYPE(RTCVideoTrack);
 
 @interface ARDAppClient () <ARDSignalingChannelDelegate, RTC_OBJC_TYPE (RTCPeerConnectionDelegate)>
 
@@ -41,6 +43,9 @@
 @property(nonatomic, strong) NSURL *webSocketURL;
 @property(nonatomic, strong) NSURL *webSocketRestURL;
 @property(nonatomic, readonly) BOOL isLoopback;
+
+@property(nonatomic, strong) RTCAudioTrack *defaultAudioTrack;
+@property(nonatomic, strong) RTCVideoTrack *defaultVideoTrack;
 
 @property(nonatomic, strong) RTC_OBJC_TYPE(RTCMediaConstraints) * defaultPeerConnectionConstraints;
 

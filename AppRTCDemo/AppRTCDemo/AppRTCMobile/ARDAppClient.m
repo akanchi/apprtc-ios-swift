@@ -878,4 +878,46 @@ static int const kKbpsMultiplier = 1000;
   return error;
 }
 
+#pragma mark - Audio mute/unmute
+- (void)muteAudioIn {
+    NSLog(@"audio muted");
+    if (_peerConnection.localStreams.count > 0) {
+        RTCMediaStream *localStream = _peerConnection.localStreams[0];
+        self.defaultAudioTrack = localStream.audioTracks[0];
+        [localStream removeAudioTrack:localStream.audioTracks[0]];
+        [_peerConnection removeStream:localStream];
+        [_peerConnection addStream:localStream];
+    }
+}
+- (void)unmuteAudioIn {
+    NSLog(@"audio unmuted");
+    if (_peerConnection.localStreams.count > 0) {
+        RTCMediaStream* localStream = _peerConnection.localStreams[0];
+        [localStream addAudioTrack:self.defaultAudioTrack];
+        [_peerConnection removeStream:localStream];
+        [_peerConnection addStream:localStream];
+    }
+}
+
+#pragma mark - Video mute/unmute
+- (void)muteVideoIn {
+    NSLog(@"video muted");
+    if (_peerConnection.localStreams.count > 0) {
+        RTCMediaStream *localStream = _peerConnection.localStreams[0];
+        self.defaultVideoTrack = localStream.videoTracks[0];
+        [localStream removeVideoTrack:localStream.videoTracks[0]];
+        [_peerConnection removeStream:localStream];
+        [_peerConnection addStream:localStream];
+    }
+}
+- (void)unmuteVideoIn {
+    NSLog(@"video unmuted");
+    if (_peerConnection.localStreams.count > 0) {
+        RTCMediaStream* localStream = _peerConnection.localStreams[0];
+        [localStream addVideoTrack:self.defaultVideoTrack];
+        [_peerConnection removeStream:localStream];
+        [_peerConnection addStream:localStream];
+    }
+}
+
 @end

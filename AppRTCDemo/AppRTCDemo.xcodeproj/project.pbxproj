@@ -141,6 +141,7 @@
 		BE302EDD25A3450C00A744C1 /* AppRTCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BE302F4D25AAD9A500A744C1 /* AppRTCDemo-Bridging-Header.h */,
 				BE302F0D25AABDDB00A744C1 /* AppRTCMobile */,
 				BE302F9025AAE24500A744C1 /* Model */,
 				BE302EF425AA0FDF00A744C1 /* Controller */,
@@ -173,7 +174,7 @@
 		BE302F0D25AABDDB00A744C1 /* AppRTCMobile */ = {
 			isa = PBXGroup;
 			children = (
-				BE302F4D25AAD9A500A744C1 /* AppRTCDemo-Bridging-Header.h */,
+				BE302F7325AAD9A700A744C1 /* common */,
 				BE302F6325AAD9A600A744C1 /* ARDAppClient.h */,
 				BE302F5425AAD9A600A744C1 /* ARDAppClient.m */,
 				BE302F7225AAD9A700A744C1 /* ARDAppClient+Internal.h */,
@@ -207,7 +208,6 @@
 				BE302F5125AAD9A600A744C1 /* ARDTURNClient+Internal.h */,
 				BE302F7125AAD9A700A744C1 /* ARDWebSocketChannel.h */,
 				BE302F6A25AAD9A700A744C1 /* ARDWebSocketChannel.m */,
-				BE302F7325AAD9A700A744C1 /* common */,
 				BE302F5E25AAD9A600A744C1 /* RTCIceCandidate+JSON.h */,
 				BE302F4F25AAD9A500A744C1 /* RTCIceCandidate+JSON.m */,
 				BE302F5C25AAD9A600A744C1 /* RTCIceServer+JSON.h */,
@@ -221,8 +221,8 @@
 		BE302F7325AAD9A700A744C1 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				BE302F7425AAD9A700A744C1 /* ARDUtilities.m */,
 				BE302F7525AAD9A700A744C1 /* ARDUtilities.h */,
+				BE302F7425AAD9A700A744C1 /* ARDUtilities.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -528,7 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = akanchi.AppRTCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AppRTCDemo/AppRTCMobile/AppRTCDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppRTCDemo/AppRTCDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -550,7 +550,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = akanchi.AppRTCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AppRTCDemo/AppRTCMobile/AppRTCDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppRTCDemo/AppRTCDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
