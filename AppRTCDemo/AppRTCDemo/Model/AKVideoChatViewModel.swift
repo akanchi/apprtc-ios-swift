@@ -31,6 +31,8 @@ class AKVideoChatViewModel: NSObject {
     private(set) var localVideoTrack: RTCVideoTrack?
     private(set) var remoteVideoTrack: RTCVideoTrack?
 
+    var localCapturer: RTCCameraVideoCapturer?
+
     var isAudioMute: Bool = false {
         didSet {
             if isAudioMute {
@@ -81,6 +83,30 @@ class AKVideoChatViewModel: NSObject {
             c.disconnect()
         }
     }
+
+    func startCapture() {
+        var device: AVCaptureDevice? = nil
+        let cameraDevices: [AVCaptureDevice] = RTCCameraVideoCapturer.captureDevices()
+        for c in cameraDevices {
+            if c.position == .front {
+                device = c
+            }
+            print("\(c.description)")
+        }
+
+        if let d = device {
+            let format = RTCCameraVideoCapturer.supportedFormats(for: d).last
+            guard let f = format else { return }
+            let fps = f.videoSupportedFrameRateRanges.first?.maxFrameRate ?? 30
+            self.localCapturer?.startCapture(with: d, format: f, fps: Int(fps)) { (error) in
+                if error != nil {
+                    print("开始捕获, error=\(error)")
+                } else {
+                    print("开始捕获, 无错误")
+                }
+            }
+        }
+    }
 }
 
 // MARK: - ARDAppClientDelegate
@@ -111,23 +137,24 @@ extension AKVideoChatViewModel: ARDAppClientDelegate {
     }
 
     func appClient(_ client: ARDAppClient!, didCreateLocalCapturer localCapturer: RTCCameraVideoCapturer!) {
-        print(#function)
+        print(#function + "\(localCapturer)")
+        DispatchQueue.main.async {
+            self.localCapturer = localCapturer
+        }
     }
 
     func appClient(_ client: ARDAppClient!, didReceiveLocalVideoTrack localVideoTrack: RTCVideoTrack!) {
-        print(#function)
+        print(#function + "localVideoTrack\(String(describing: localVideoTrack))")
         DispatchQueue.main.async {
             if let r = self.delegate?.localRender() {
                 self.localVideoTrack?.remove(r)
                 self.localVideoTrack = nil
                 self.delegate?.resetLocalRenderFrame()
-            }
-
-            self.localVideoTrack = localVideoTrack
-
-            if let r = self.delegate?.localRender() {
+                self.localVideoTrack = localVideoTrack
                 self.localVideoTrack?.add(r)
             }
+
+            self.startCapture()
         }
     }
 
