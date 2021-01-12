@@ -80,10 +80,12 @@ class AKMainViewController: UIViewController {
 // MARK: - Join点击事件
     @objc
     private func onJoinAction(sender: UIButton!) {
-        if let name = self.roomIdInputTextField.text {
+        if let name = self.roomIdInputTextField.text, name.trimmingCharacters(in: .whitespaces).count >= 5 {
             let chatVC = AKVideoChatViewController()
             chatVC.roomName = name
             self.navigationController?.pushViewController(chatVC, animated: true)
+        } else {
+            print("Room name must be 5 or more characters and include only letters, numbers, underscore and hyphen.")
         }
     }
 }
