@@ -45,9 +45,9 @@ class AKVideoChatViewModel: NSObject {
     var isVideoMute: Bool = false {
         didSet {
             if isVideoMute {
-                self.client?.muteVideoIn()
+                self.muteVideoIn()
             } else {
-                self.client?.unmuteVideoIn()
+                self.unmuteVideoIn()
             }
         }
     }
@@ -105,6 +105,21 @@ class AKVideoChatViewModel: NSObject {
                     print("开始捕获, 无错误")
                 }
             }
+        }
+    }
+
+    func muteVideoIn() {
+        if let r = self.delegate?.localRender() {
+            self.localVideoTrack?.remove(r)
+            self.delegate?.resetLocalRenderFrame()
+            self.localCapturer?.stopCapture()
+        }
+    }
+
+    func unmuteVideoIn() {
+        if let r = self.delegate?.localRender() {
+            self.localVideoTrack?.add(r)
+            self.startCapture()
         }
     }
 }
