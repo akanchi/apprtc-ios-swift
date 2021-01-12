@@ -147,9 +147,9 @@ extension AKVideoChatViewModel: ARDAppClientDelegate {
         print(#function + "localVideoTrack\(String(describing: localVideoTrack))")
         DispatchQueue.main.async {
             if let r = self.delegate?.localRender() {
-                self.localVideoTrack?.remove(r)
-                self.localVideoTrack = nil
-                self.delegate?.resetLocalRenderFrame()
+//                self.localVideoTrack?.remove(r)
+//                self.localVideoTrack = nil
+//                self.delegate?.resetLocalRenderFrame()
                 self.localVideoTrack = localVideoTrack
                 self.localVideoTrack?.add(r)
             }
@@ -159,7 +159,7 @@ extension AKVideoChatViewModel: ARDAppClientDelegate {
     }
 
     func appClient(_ client: ARDAppClient!, didReceiveRemoteVideoTrack remoteVideoTrack: RTCVideoTrack!) {
-        print(#function)
+        print(#function + "remoteVideoTrack\(String(describing: remoteVideoTrack))")
         DispatchQueue.main.async {
             self.remoteVideoTrack = remoteVideoTrack
 
